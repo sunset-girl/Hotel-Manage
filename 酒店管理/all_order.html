@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scal=1.0,minimum-scale=0.05,maximum-scale=2.0,user-scalable=yes"/>
+    <title>全部订单</title>
+    <style>
+        html,body,ul{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        p{
+            width:100%;
+            height: 40px;
+            background-color: #0097a2;
+            line-height: 40px;
+            text-align: center;
+            color:white;
+            margin:0 auto;
+        }
+        span.left{
+            float:left;
+        }
+        span{
+            font-size:30px;
+        }
+        .left1{
+            float:left;
+            width: 49%;
+            border-right:3px solid grey;
+            border-bottom:3px solid #008DA1;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size:25px;
+            color:#008DA1;
+        }
+        .right1{
+            float: left;
+            border-bottom:3px solid grey;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size:25px;
+            width: 50%;
+        }
+        ul dl{
+            clear: both;
+            position:relative;
+        }
+        dl dt{
+            color:#008DA1;
+            font-size:25px;
+            padding:25px;
+        }
+        dl dd{
+            font-size:25px;
+            padding:5px;
+            margin-left:15px;
+
+        }
+        dl .one,.two{
+            position:absolute;
+            top:45%;
+            left: 60%;
+            background-color: #0097A2;
+            color:white;
+            font-size:24px;
+            border-radius:8px;
+        }
+        .dw dl .two{
+            left:82%;
+        }
+        ul .dw{
+            border-bottom:25px solid #F8F8F8;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var left = document.getElementsByClassName("left")[0];
+            var href = location.hreef;
+            left.onclick = function(){
+                location.href = "Yay_member_central.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><span class="left"><</span><span>全部订单</span></p>
+    <ul>
+        <li>
+            <ul>
+                <li class="left1">未完成</li>
+                <li class="right1">已完成</li>
+            </ul>
+        </li>
+        <li class="dw">
+            <dl>
+                <dt>温馨大床房</dt>
+                <dd>客房订单:F17G180051</dd>
+                <dd>入住时间:2017-07-18</dd>
+                <dd><input class="one" type="button" value="去付款"></dd>
+                <dd><input class="two" type="button" value="取消"></dd>
+            </dl>
+        </li>
+        <li class="dw">
+            <dl>
+                <dt>温馨大床房</dt>
+                <dd>客房订单:F17G180051</dd>
+                <dd>入住时间:2017-07-18</dd>
+                <dd><input class="one" type="button" value="去付款"></dd>
+                <dd><input class="two" type="button" value="取消"></dd>
+            </dl>
+        </li>
+        <li class="dw">
+            <dl>
+                <dt>温馨大床房</dt>
+                <dd>客房订单:F17G180051</dd>
+                <dd>入住时间:2017-07-18</dd>
+                <dd><input class="one" type="button" value="去付款"></dd>
+                <dd><input class="two" type="button" value="取消"></dd>
+            </dl>
+        </li>
+        <li class="dw">
+            <dl>
+                <dt>温馨大床房</dt>
+                <dd>客房订单:F17G180051</dd>
+                <dd>入住时间:2017-07-18</dd>
+                <dd><input class="one" type="button" value="去付款"></dd>
+                <dd><input class="two" type="button" value="取消"></dd>
+            </dl>
+        </li>
+        <li class="dw">
+            <dl>
+                <dt>温馨大床房</dt>
+                <dd>客房订单:F17G180051</dd>
+                <dd>入住时间:2017-07-18</dd>
+                <dd><input class="one" type="button" value="去付款"></dd>
+                <dd><input class="two" type="button" value="取消"></dd>
+            </dl>
+        </li>
+        <li class="dw">
+            <dl>
+                <dt>温馨大床房</dt>
+                <dd>客房订单:F17G180051</dd>
+                <dd>入住时间:2017-07-18</dd>
+                <dd><input class="one" type="button" value="去付款"></dd>
+                <dd><input class="two" type="button" value="取消"></dd>
+            </dl>
+        </li>
+    </ul>
+</body>
+</html>

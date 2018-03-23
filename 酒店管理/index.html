@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>首页</title>
+
+<link rel="stylesheet" type="text/css" href="css/index.css">
+	<style>
+		body{
+			margin:0;
+			padding:0;
+		}
+		form{
+			width:100%;
+			text-align: center;
+		}
+		form p{
+			height: 35px;
+			background-color: #0097a2;
+			line-height: 35px;
+			text-align: center;
+			color:white;
+			margin-top:0;
+		}
+		form p .left{
+			float:left;
+			font-size:25px;
+		}
+		form p .right{
+			float:right;
+		}
+		form p .right img{
+			width: 20px;
+			height: 20px;
+			padding-right:10px;
+		}
+		form .content{
+			height: 40px;
+			width: 95%;
+			margin-bottom:10px;
+			border-radius:8px;
+			border:1px solid lightgray;
+			font-size:15px;
+			margin:0 auto;
+			position:relative;
+			margin:10px 6px;
+			padding:0 10px;
+		}
+		.content1{
+			font-size: 18px;
+			float:left;
+			padding: 5px 0 0 10px
+		}
+		form span{
+			float:left;
+			line-height: 40px;
+		}
+		form i{
+			float:right;
+			line-height:40px;
+			padding-top:3px;
+		}
+		form input[type='submit']{
+			background-color: #0097a2;
+			font-size:18px;
+			color:white;
+			height: 40px;
+			width: 95%;
+			margin-bottom:10px;
+			border-radius:8px;
+			border:1px solid lightgray;
+			padding-left:5px;
+		}
+		#rz{
+			display:none;
+		}
+		#small5{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+  
+<!-- 入住时间选择 -->
+
+<form action="hotel_list.html" method="post" id="forms">
+	<div class="row select-time"><p><span class="left"><</span>酒店预订<span></span><span class="right"><img src="img/home.png" alt=""></span></p>
+	<div class="content"><span>入住时间: </span><div class="content1"><span class="time entertime"></span></div><i class="imgs"><span id="rz">入住:</span><img src="img/small1.png" alt=""></i></div>
+	<div class="content"><span><span>离店:</span></span><div class="content1"><span class="time leavetime"></span><span class="night">共1晚</span></div><i class="ldsj"><img src="img/small2.png" alt=""><img src="img/small3.png" alt=""></i></div></div>
+	<div class="content"><span>时租房: </span><div class="content1"></div><i><img src="img/small4.png" id="small4"><img src="img/small5.png" id="small5"></i></div>
+	<input type="submit" value="查询">
+	<h4>会员中心</h4>
+
+</form>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript">
+	$('.select-time').hotelDate();
+	$('.imgs').click(function(){
+		$('.select-time').css('display','block');
+	})
+	$('#small4').click(function(){
+			$('#small4').css('display','none');
+		    $('#small5').css('display','block');
+	})
+	$('#small5').click(function(){
+		$('#small5').css('display','none');
+		$('#small4').css('display','block');
+	})
+</script>
+
+</body>
+</html>

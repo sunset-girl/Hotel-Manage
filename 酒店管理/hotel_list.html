@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.05,maximum-scale=2.0,user-scalable=yes"/>
+    <title>酒店订单</title>
+    <style>
+        body{
+            margin:0 auto;
+            padding:0;
+            width:100%;
+        }
+        ul{
+            list-style:none;
+        }
+        .content li{
+            width: 100%;
+        }
+        .header p{
+            height: 35px;
+            background-color: #0097a2;
+            line-height: 35px;
+            text-align: center;
+            color:white;
+            margin-top:0;
+        }
+        .header p .left{
+            float:left;
+            font-size:25px;
+        }
+        .header .head{
+            padding-bottom:10px;
+            border-bottom:2px solid #cccccc;
+            font-size:17px;
+        }
+        .content ul .left{
+            position:relative;
+        }
+        .content li h5{
+            position:absolute;
+            top:-18px;
+            left:227px;
+            font-size:18px;
+            width: 90px;
+            color: black;
+            font-weight: 100;
+        }
+        .content .left a{
+            text-decoration:none;
+        }
+        .content li b{
+            margin-left:20px;
+        }
+        .content .left{
+            float:left;
+            margin-right:25%;
+        }
+        .content .right{
+            float:right;
+        }
+       .content .right img{
+            padding-top:3px;
+            float:right;
+        }
+       .content .right input{
+            width: 25px;
+            height: 24px;
+            margin:0 5px;
+            text-align: center;
+            float:right;
+            color:red;
+        }
+        .content input[type='submit']{
+            width: 100%;
+            height: 45px;
+            background-color: #0097a2;
+            color:white;
+            font-size:18px;
+            border-radius:5px;
+            margin-top:10px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var img1 = document.getElementsByClassName("img1");
+            var img2 = document.getElementsByClassName("img2");
+            var input1 = document.getElementsByClassName("input1");
+            /* alert(input1.setAttribute('value',9));*/
+            for(var i=0;i<img1.length;i++){
+                img2[i].index = i;
+                img2[i].onclick = function(){
+                    var a = input1[this.index].value;
+                    var i = parseInt(a);
+                    input1[this.index].value = i+1;
+                }
+                img1[i].index = i;
+                img1[i].onclick = function(){
+                    var a = input1[this.index].value;
+                    var i = parseInt(a);
+                    if(i>0){
+                        input1[this.index].value = i-1;
+                    }
+                }
+            }
+            var left = document.getElementsByClassName("left")[0];
+            var href = location.hreef;
+            left.onclick = function(){
+                location.href = "index.html";
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="all_order.html">
+    <div class="header">
+        <p><span class="left"><</span>酒店列表<span></span></p>
+        <div class="head">
+            <span>入住时间:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<spqn>至</spqn>
+        </div>
+    </div>
+    <div class="content">
+    <ul>
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/1.jpg"></span><span><h5>豪华标准房</h5><b>￥248.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2 hia">
+            </div>
+        </li>
+
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/2.jpg"></span><span><h5>温馨大床房</h5><b>￥208.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2">
+            </div>
+        </li>
+
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/3.jpg"></span><span><h5>雅逸家庭房</h5><b>￥268.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2">
+            </div>
+        </li>
+
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/4.jpg"></span><span><h5>精选大床房</h5><b>￥238.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2">
+            </div>
+        </li>
+
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/5.jpg"></span><span><h5>主题亲子房</h5><b>￥448.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2">
+            </div>
+        </li>
+
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/6.jpg"></span><span><h5>轻奢大床房</h5><b>￥278.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2">
+            </div>
+        </li>
+
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/7.jpg"></span><span><h5>商务标准房</h5><b>￥288.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2">
+            </div>
+        </li>
+
+        <li>
+            <div class="left">
+                <a href="hotel_detail.html">
+                    <span><img src="img/8.jpg"></span><span><h5>豪华家庭房</h5><b>￥268.00</b></span>
+                </a>
+            </div>
+            <div class="right">
+                <img src="img/small2.png" alt="" class="img1"><input type="text" value="0" class="input1"><img src="img/small3.png" alt="" class="img2">
+            </div>
+        </li>
+    </ul>
+        <input type="submit" value="预订">
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scal=1.0,minimum-scale=0.05,maximum-scale=2.0,user-scalable=yes"/>
+    <title>个人资料</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color:#f8f8f8;
+        }
+        dl{
+            margin:0;
+        }
+        dl dt{
+            height: 35px;
+            background-color: #0097a2;
+            line-height: 35px;
+            text-align: center;
+            color:white;
+            margin:0 auto;
+        }
+        dt .left{
+            float:left;
+            font-size:25px;
+        }
+        dl dd{
+            width: 95%;
+            margin:0 auto;
+        }
+        dd input{
+            width: 83%;
+            height: 45px;
+            border:0 solid white;
+            margin:25px 0;
+            font-size:17px;
+            padding-left:10px;
+        }
+        dl dd input[type='radio']{
+            height: 20px;
+            width: 5%;
+            margin:10px 0 0 10px;
+        }
+        dd .y_left{
+            width: 60%;
+        }
+        dd .y_right{
+            width: 18%;
+        }
+        dd input[type='submit'],.y_right{
+            background-color: #0097a2;
+            font-size:18px;
+            color:white;
+            margin-left:20px;
+            width: 90%;
+            border-radius:5px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var left = document.getElementsByClassName("left")[0];
+            var href = location.href;
+            left.onclick = function(){
+                location.href = "Yay_member_central.html";
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="Yay_member_central.html">
+    <dl>
+        <dt><span class="left"><</span><span>完善资料</span></dt>
+        <dd>*称谓:<input type="radio" name="call">女士
+            <input type="radio" name="call">男士</br>
+
+            *姓氏:<input type="text" placeholder="请输入您的姓氏"></br>
+            *姓名:<input type="text" placeholder="请输入您的名字"></br>
+            生日: <input type="number" placeholder="请输入您的生日，格式1999-12-12"></br>
+            邮箱:<input type="email" placeholder="请输入您的邮箱"></br>
+            身份证:<input type="text" placeholder="请输入您的身份证号"></br>
+            *手机:<input type="number" placeholder="请输入您的手机号"></br>
+            *验证码:<input type="number" placeholder="请输入验证码" class="y_left"><input type="button" value="获取验证码" class="y_right"/></br>
+            <input type="submit" value="立即绑定">
+        </dd>
+    </dl>
+</form>
+</body>
+</html>
